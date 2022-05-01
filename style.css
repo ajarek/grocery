@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --blue: #a5d5f8;
+    --dark-blue: #75bff5;
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #e66b6b;
+    --red: #bb2525;
+    --green: #25bb32;
+    --light-blue: #f1f5f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: #f1f5f8;
+}
+
+.card {
+    width: 560px;
+    height: 291px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.info,
+.clear-items {
+    color: var(--light-red);
+}
+
+.info {
+    display: none;
+    position: absolute;
+    top: 5%;
+}
+
+.clear-items {
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 5%;
+}
+
+.clear-items:hover {
+    outline: 1px solid var(--red);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+.inp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inp input[type="text"] {
+    width: 85%;
+    height: 40px;
+    padding: 1rem;
+    font-size: 1rem;
+    background: var(--light-blue);
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.inp input[type="text"]:focus {
+    outline: 1px solid var(--green);
+}
+
+.inp input[type="submit"] {
+    width: 15%;
+    height: 40px;
+    border: none;
+    background: var(--blue);
+    color: var(--black);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.inp input[type="submit"]:hover {
+    color: var(--white);
+    background: var(--dark-blue);
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.wrap button {
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        min-height: 100vh;
+        justify-content: flex-start;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    .inp {
+        margin-bottom: 2rem;
+    }
+
+    .info {
+        top: 55px;
+    }
+
+    .clear-items {
+        bottom: 20px;
+    }
+
+    .inp input[type="submit"] {
+        width: 25%;
+    }
+
+    .inp input[type="text"] {
+        width: 75%;
+    }
+}
